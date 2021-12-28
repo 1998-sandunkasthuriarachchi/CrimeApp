@@ -1,20 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import AppLoading from "expo-app-loading";
+import { useFonts } from "expo-font";
+import HomeStack from "./routes/HomeStack";
+
 
 export default function App() {
+  //load custom fonts
+  const [loaded]=useFonts({
+      montserratregular: require("./assets/fonts/Montserrat-Regular.ttf"),
+      montserratbold: require("./assets/fonts/Montserrat-Bold.ttf"),
+      montserratsemibold: require("./assets/fonts/Montserrat-SemiBold.ttf"),
+      robotoregular: require("./assets/fonts/Roboto-Regular.ttf"),
+      robotobold: require("./assets/fonts/Roboto-Bold.ttf"),
+      montserratsemibold: require("./assets/fonts/Roboto-Medium.ttf"),
+  });
+  //check fonts load
+  if(!loaded){
+    return null;
+  }
+    
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+      <HomeStack/>
+    );
+  
+  
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
