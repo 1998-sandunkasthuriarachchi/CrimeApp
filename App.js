@@ -1,7 +1,6 @@
 import AppLoading from "expo-app-loading";
 import { useFonts } from "expo-font";
-import HomeStack from "./routes/HomeStack";
-
+import Navigator from './routes/drawer';
 
 export default function App() {
   //load custom fonts
@@ -19,7 +18,7 @@ export default function App() {
   }
     
   return (
-      <HomeStack/>
+      <Navigator/>
     );
   
   

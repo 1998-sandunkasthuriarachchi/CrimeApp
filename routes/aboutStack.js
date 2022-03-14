@@ -1,26 +1,26 @@
 import { createStackNavigator } from "react-navigation-stack";
 import React from "react";
 
-import Home from "../screens/Home";
+import About from '../screens/About';
 import Header from "../shared/header";
 
 const screens={
-    Home:{
-        screen:Home,
+    About:{
+        screen:About,
         navigationOptions:({navigation})=>{
             return{
-                headerTitle:()=><Header navigation={navigation} title="Crime App" />,
+                headerTitle:()=><Header navigation={navigation} title="About" />,
             }
         }
     }
     
 }
 
-const HomeStack = createStackNavigator(screens,{
+const AboutStack = createStackNavigator(screens,{
     defaultNavigationOptions:{
         headerStyle:{backgroundColor:"#FF5677",height:100}
     }
 });
 
-export default HomeStack;
+export default AboutStack;
 

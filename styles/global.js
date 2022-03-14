@@ -9,16 +9,16 @@ export const styles=StyleSheet.create({
       },
       button:{
         color:'#ffff',
-        backgroundColor:'#E74C3C',
+        backgroundColor:'#FF5677',
         paddingVertical:20,
-        paddingHorizontal:60,
+        paddingHorizontal:80,
         borderRadius:35
       },
       text:{
         fontSize:20,
         color:'#ffff',
         textTransform:'uppercase',
-        fontFamily:'robotobold'
+        fontFamily:'robotobold',
       },
       titleArea:{
         marginBottom:150,
@@ -28,4 +28,5 @@ export const styles=StyleSheet.create({
         color:'#ffff',
         fontFamily:'robotoregular'
       }
+      
 });
